@@ -1,12 +1,17 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/board?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boards?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: root
-    password: password
+    password: dlscjf12
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

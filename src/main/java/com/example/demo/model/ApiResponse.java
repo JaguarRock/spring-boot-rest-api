@@ -1,7 +1,6 @@
-package com.example.model;
+package com.example.demo.model;
 
 public class ApiResponse<T> {
-
     private int status;
     private String message;
     private Object result;
