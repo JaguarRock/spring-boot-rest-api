@@ -12,4 +12,6 @@ $ curl -X localhost:{portNum}
 
 Connect with Front-end (Reactjs) --> Success
 
-Attribute which data type is String is Null
+Attribute which data type is String is Null --> Solved
+
+Solution : Add DTO, ModelMapper, DTO(Data Transfer Object) ≠ Entity
