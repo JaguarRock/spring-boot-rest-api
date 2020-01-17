@@ -1,20 +1,8 @@
 package com.example.demo.model;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-
-@Entity
-@Table(name="board")
-public class Board {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BoardDTO {
     private Long id;
-
-    @Column(name = "title")
     private String title;
-
-    @Column(name = "content")
     private String content;
 
     public Long getId() {
@@ -39,10 +27,5 @@ public class Board {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }

@@ -1,8 +1,10 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.model.Board;
+import com.example.demo.model.BoardDTO;
 import com.example.demo.respository.BoardRepository;
 import com.example.demo.service.BoardService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,15 +16,14 @@ import java.util.Optional;
 public class BoardServiceImpl implements BoardService {
 
     @Autowired
-    BoardRepository boardRepository;
+    private BoardRepository boardRepository;
 
     @Override
-    public Board save(Board board) {
-        board = new Board();
-        board.setId(board.getId());
-        board.setTitle(board.getTitle());
-        board.setContent(board.getContent());
-        return boardRepository.save(board);
+    public Board save(BoardDTO board) {
+        Board newBoard = new Board();
+        newBoard.setTitle(board.getTitle());
+        newBoard.setContent(board.getContent());
+        return boardRepository.save(newBoard);
     }
 
     @Override
@@ -44,11 +45,11 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public Board update(Board board) {
-        board = findById(board.getId());
+    public BoardDTO update(BoardDTO boardDTO) {
+        Board board = findById(boardDTO.getId());
         if(board != null) {
             boardRepository.save(board);
         }
-        return board;
+        return boardDTO;
     }
 }

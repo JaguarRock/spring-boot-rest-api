@@ -1,12 +1,13 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Board;
+import com.example.demo.model.BoardDTO;
 
 import java.util.List;
 
 public interface BoardService {
 
-    Board save(Board board);
+    Board save(BoardDTO board);
 
     List<Board> findAll();
 
@@ -14,5 +15,5 @@ public interface BoardService {
 
     Board findById(Long id);
 
-    Board update(Board board);
+    BoardDTO update(BoardDTO board);
 }

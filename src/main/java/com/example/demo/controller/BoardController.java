@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.ApiResponse;
 import com.example.demo.model.Board;
+import com.example.demo.model.BoardDTO;
 import com.example.demo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class BoardController {
     private BoardService boardService;
 
     @PostMapping
-    public ApiResponse<Board> saveBoard(@RequestBody Board board) {
+    public ApiResponse<Board> saveBoard(@RequestBody BoardDTO board) {
         return new ApiResponse<>(HttpStatus.OK.value(), "Board saved", boardService.save(board));
 
     }
@@ -34,7 +35,7 @@ public class BoardController {
     }
 
     @PutMapping("/{id}")
-    public ApiResponse<Board> update(@RequestBody Board board) {
+    public ApiResponse<Board> update(@RequestBody BoardDTO board) {
         return new ApiResponse<>(HttpStatus.OK.value(), "Board Update", boardService.update(board));
     }
 
