@@ -35,7 +35,7 @@ public class BoardController {
     }
 
     @PutMapping("/{id}")
-    public ApiResponse<Board> update(@RequestBody BoardDTO board) {
+    public ApiResponse<BoardDTO> update(@RequestBody BoardDTO board) {
         return new ApiResponse<>(HttpStatus.OK.value(), "Board Update", boardService.update(board));
     }
 

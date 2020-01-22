@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service(value = "boardService")
 public class BoardServiceImpl implements BoardService {
 
     @Autowired
@@ -48,6 +48,7 @@ public class BoardServiceImpl implements BoardService {
     public BoardDTO update(BoardDTO boardDTO) {
         Board board = findById(boardDTO.getId());
         if(board != null) {
+            BeanUtils.copyProperties(boardDTO, board);
             boardRepository.save(board);
         }
         return boardDTO;
