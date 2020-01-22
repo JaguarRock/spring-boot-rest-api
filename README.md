@@ -8,6 +8,8 @@ JSON-RPC Call
 
 $ curl -X localhost:{portNum}
 
+Use swagger for API documentaion
+
 ## Issue
 
 Connect with Front-end (Reactjs) --> Success
