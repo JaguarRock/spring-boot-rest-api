@@ -1,19 +1,17 @@
 # spring-boot-rest-api
 
-Basic Spring Boot REST-API CRUD Board
+## Dev Env
 
-Client (React.js) <--> Spring Boot Server <--> MySQL Database
-
-JSON-RPC Call
-
-$ curl -X localhost:{portNum}
-
-Use swagger for API documentaion
+- Java : 1.8.0_231
+- Framework : Spring Boot 4
+- Build Tools : Gradle
+- ORM : JPA Hibernate
+- Database : MySQL Database
+- IDE : IntelliJ IDEA
+- API Documentation : swagger
 
 ## Issue
 
-Connect with Front-end (Reactjs) --> Success
+The attribute which data type is String is null --> Add DTO
 
-Attribute which data type is String is Null --> Solved
-
-Solution : Add DTO, ModelMapper, DTO(Data Transfer Object) ≠ Entity
+DTO ≠ Entity
