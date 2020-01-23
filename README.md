@@ -12,6 +12,6 @@
 
 ## Issue
 
-The attribute which data type is String is null --> Add DTO
+The attribute which data type is String is null --> Add DTO, DTO ≠ Entity
 
-DTO ≠ Entity
+Update board doesn't work --> Add BeanUtils.copyProperties
